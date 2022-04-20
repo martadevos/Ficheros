@@ -17,7 +17,9 @@ public class CharCounter {
 
     public void countIfTargeted(char c) {
         for (int i = 0; i < busqueda.length(); i++) {
-            if (busqueda.toLowerCase(Locale.ROOT).contains(Character.toString(c).toLowerCase(Locale.ROOT))) {
+            if (!caseSensitive) {
+                c = Character.toLowerCase(c);
+            }else if (busqueda.contains(Character.toString(c))) {
                 contador++;
             }
         }

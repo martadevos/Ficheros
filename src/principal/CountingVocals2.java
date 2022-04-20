@@ -2,16 +2,15 @@ package principal;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Locale;
 
-public class CountingVocals {
-    private static String NOMBRE_TEXTO = "input.txt";
-    private static String VOCALES = "aeiou";
+public class CountingVocals2 {
+    private static String NOMBRE_TEXTO2 = "input2.txt";
 
     public static void run(boolean caseSensitive) {
-
         try {
-            CharCounter contador = new CharCounter(VOCALES, caseSensitive);
-            FileReader texto = new FileReader(NOMBRE_TEXTO);
+            CharCounter2 contador = new CharCounter2(caseSensitive);
+            FileReader texto = new FileReader(NOMBRE_TEXTO2.toLowerCase(Locale.ROOT));
             int c = texto.read();
             while ( c != -1 ) {
                 contador.countIfTargeted((char) c);

@@ -1,10 +1,13 @@
 package principal;
 
 public class Main {
-
     public static void main(String[] args) {
-	CountingVocals.run();
-    BackwardsWriter.run();
+        //CountingVocals.run(false);
+        //CountingVocals.run(true);
+        //BackwardsWriter.run();
+        //HowlerMaker.run();
+        CountingVocals2.run(false);
+        CountingVocals2.run(true);
     }
 
 }
