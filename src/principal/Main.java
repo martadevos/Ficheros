@@ -6,8 +6,10 @@ public class Main {
         //CountingVocals.run(true);
         //BackwardsWriter.run();
         //HowlerMaker.run();
-        CountingVocals2.run(false);
-        CountingVocals2.run(true);
+        //CountingVocals2.run(false);
+        //CountingVocals2.run(true);
+        //Ejemplo1.leerNums();
+        Ejemplo2.leerNums();
     }
 
 }
