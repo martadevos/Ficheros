@@ -8,7 +8,7 @@ public class Main {
         //HowlerMaker.run();
         //CountingVocals2.run(false);
         //CountingVocals2.run(true);
-        //Ejemplo1.leerNums();
+        Ejemplo1.leerNums();
         Ejemplo2.leerNums();
     }
 

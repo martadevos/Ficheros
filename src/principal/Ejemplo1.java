@@ -13,12 +13,18 @@ de Scanner, y mostrar al final la suma de todos ellos.*/
     public static void leerNums() {
         BufferedReader lectura = null;
         double suma = 0;
+        String registro;
+        Scanner s;
         try {
             lectura = new BufferedReader(new FileReader("E1numeros.txt"));
-            Scanner s = new Scanner(lectura);
-            while (s.hasNextDouble()) {
-                suma += s.nextDouble();
-                lectura.readLine();
+            registro = lectura.readLine();
+
+            while (registro != null) {
+                s = new Scanner(registro);
+                if (s.hasNextDouble()) {
+                    suma += s.nextDouble();
+                }
+                registro = lectura.readLine();
             }
         } catch (IOException e) {
             System.out.println("Ha habido un problema con la lectura :(");
@@ -31,7 +37,26 @@ de Scanner, y mostrar al final la suma de todos ellos.*/
                 System.out.println("Ha habido un problema al cerrar el flujo :(");
             }
         }
+        System.out.printf("La suma es %s\n", suma);
+
+        /*
+        double suma = 0;
+        String registro;
+        Scanner s;
+        try (BufferedReader lectura = new BufferedReader(new FileReader("E1numeros.txt"));){
+            registro = lectura.readLine();
+            while (registro != null) {
+                s = new Scanner(registro);
+                if (s.hasNextDouble()) {
+                    suma += s.nextDouble();
+                }
+                registro = lectura.readLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Ha habido un problema :(");
+        }
         System.out.printf("La suma es %s", suma);
+        */
     }
 
 }
